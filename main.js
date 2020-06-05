@@ -3,6 +3,7 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 	function createAnnotater(annotationText) {
 		function f() {
+			// Create sidebar
 			var annotationDiv = document.createElement("div");
 			annotationDiv.classList.add("annotation");
 			console.log(annotationDiv);
@@ -12,6 +13,11 @@ window.addEventListener("DOMContentLoaded", (event) => {
 
 			annotationDiv.appendChild(annotation);
 			document.body.appendChild(annotationDiv);
+
+			// Move main div inwards
+			var main = document.getElementById("main")
+			main.style.marginLeft = "160px";
+			main.style.padding = "0px, 10px";
 		}
 		return f;
 	}
